@@ -30,6 +30,7 @@ class KateLibby
     {
         foreach($this->reminders as &$line)
         {
+            array_push($this->parts, $line);
             $words =  preg_split('/\s+/', $line);
             $dt = new DateTime('@'.$words[0]);
             $dt->setTimeZone(new DateTimeZone('America/New_York'));
