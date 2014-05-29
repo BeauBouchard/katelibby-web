@@ -16,7 +16,7 @@ class KateLibby
     private $parts;
     public function __construct()
     {
-        $this->reminders= file('/opt/katelibby/katelibby-localhost.reminders.db');
+        $this->reminders= file('katelibby-localhost.reminders.db');
     }
     public function getParts(int $incPartNum) {
         return $this->parts;
