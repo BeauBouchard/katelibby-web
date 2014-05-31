@@ -25,7 +25,7 @@ class KateLibby
     }
     public function readReminderFile()
     {
-        $this->reminders= file('/opt/katelibby/katelibby-localhost.reminders.db');
+        $this->reminders= file('katelibby-localhost.reminders.db');
     }
     public function digest()
     {
@@ -52,7 +52,6 @@ class KateLibby
     }
     public function checkStatus()
     {
-        exec("pgrep -f phenny", $return);
         if (empty($return)) {
             $this->running = false;
         }else{
